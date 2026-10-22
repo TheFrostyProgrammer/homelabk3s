@@ -1,0 +1,6 @@
+# Kubernetes cluster configs (CRITICAL)
+k3s.yaml
+k3s-remote.yaml
+
+# Local environment variables
+.envrc

@@ -1,0 +1,7 @@
+{
+	"image":"mcr.microsoft.com/devcontainers/base:ubuntu",
+	"remoteEnv": {
+		"KUBECONFIG": "/workspaces/homelab_k3s/k3s-remote.yaml"
+	}
+}
+
