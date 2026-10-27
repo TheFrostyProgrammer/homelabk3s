@@ -1,3 +1,4 @@
 [tools]
+flux2 = "latest"
 gh = "latest"
 kubectl = "latest"
