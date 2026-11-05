@@ -37,3 +37,7 @@ spec:
         ingressClassName: traefik
         hosts:
           - gs.elliotbellingham.com
+        tls:
+          - secretName: grafana-tls-cert
+            hosts:
+              - gs.elliotbellingham.com
