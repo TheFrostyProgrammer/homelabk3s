@@ -32,3 +32,8 @@ spec:
   values:
     grafana:
       adminPassword: mischa
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - gs.elliotbellingham.com
