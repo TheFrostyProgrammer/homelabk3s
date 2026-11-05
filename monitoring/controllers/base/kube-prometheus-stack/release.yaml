@@ -38,6 +38,6 @@ spec:
         hosts:
           - gs.elliotbellingham.com
         tls:
-          - secretName: grafana-tls-cert
+          - secretName: grafana-tls-secret
             hosts:
               - gs.elliotbellingham.com
