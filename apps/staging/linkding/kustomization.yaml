@@ -6,3 +6,4 @@ resources:
   # - cloudflare.yaml
   - cloudflare_secrets.yaml
   - linkding_container_env_secret.yaml
+  - ingress.yaml
