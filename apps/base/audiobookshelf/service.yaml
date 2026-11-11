@@ -4,9 +4,10 @@ metadata:
   name: audiobookshelf
 spec:
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
+    # - protocol: TCP
+    port: 3005
+    # Ports are the same and don't require defining twice.
+    # targetPort: 3005
   selector:
     app: audiobookshelf
   type: ClusterIP
