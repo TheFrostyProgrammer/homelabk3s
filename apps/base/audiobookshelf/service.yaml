@@ -5,7 +5,7 @@ metadata:
 spec:
   ports:
     # - protocol: TCP
-    port: 3005
+    - port: 3005
     # Ports are the same and don't require defining twice.
     # targetPort: 3005
   selector:
