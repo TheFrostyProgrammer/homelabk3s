@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: audiobookshelf-ports
+  namespace: audiobookshelf
+data:
+  # protocol: TCP
+  PORT: 3005
+  # targetPort: 13378

@@ -19,8 +19,11 @@ spec:
       containers:
         - name: audiobookshelf
           image: advplyr/audiobookshelf:2.37.0
-          ports:
-            - containerPort: 80
+          # ports:
+          # - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: audiobookshelf-ports
       #     volumeMounts:
       #       - name: audiobookshelf-data
       #         mountPath: /etc/audiobookshelf/data
