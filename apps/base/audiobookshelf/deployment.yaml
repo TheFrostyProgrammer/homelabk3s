@@ -28,16 +28,16 @@ spec:
                 name: audiobookshelf-ports
           volumeMounts:
             - name: audiobookshelf-data
-              mountPath: /etc/audiobookshelf/data/config
+              mountPath: /config
               subpath: config
             - name: audiobookshelf-data
-              mountPath: /etc/audiobookshelf/data/metadata
+              mountPath: /metadata
               subpath: metadata
             - name: audiobookshelf-data
-              mountPath: /etc/audiobookshelf/data/audiobooks
+              mountPath: /audiobooks
               subpath: audiobooks
             - name: audiobookshelf-data
-              mountPath: /etc/audiobookshelf/data/podcasts
+              mountPath: /podcasts
               subpath: podcasts
       volumes:
         - name: audiobookshelf-data
