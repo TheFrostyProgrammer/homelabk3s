@@ -26,25 +26,25 @@ spec:
           envFrom:
             - configMapRef:
                 name: audiobookshelf-ports
-      volumeMounts:
+          volumeMounts:
+            - name: audiobookshelf-data
+              mountPath: /etc/audiobookshelf/data/config
+              subpath: config
+            - name: audiobookshelf-data
+              mountPath: /etc/audiobookshelf/data/metadata
+              subpath: metadata
+            - name: audiobookshelf-data
+              mountPath: /etc/audiobookshelf/data/audiobooks
+              subpath: audiobooks
+            - name: audiobookshelf-data
+              mountPath: /etc/audiobookshelf/data/podcasts
+              subpath: podcasts
+      volumes:
         - name: audiobookshelf-data
-          mountPath: /etc/audiobookshelf/data/config
-          subpath: config
-        - name: audiobookshelf-data
-          mountPath: /etc/audiobookshelf/data/metadata
-          subpath: metadata
-        - name: audiobookshelf-data
-          mountPath: /etc/audiobookshelf/data/audiobooks
-          subpath: audiobooks
-        - name: audiobookshelf-data
-          mountPath: /etc/audiobookshelf/data/podcasts
-          subpath: podcasts
+          persistentVolumeClaim:
+            claimName: audiobookshelf-data-pvc
       #     securityContext:
       #       allowPrivilegeEscalation: false
       #     envFrom:
       #       - secretRef:
       #           name: audiobookshelf-container-env
-      volumes:
-        - name: audiobookshelf-data
-          persistentVolumeClaim:
-            claimName: audiobookshelf-data-pvc
