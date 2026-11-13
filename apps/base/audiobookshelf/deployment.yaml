@@ -13,6 +13,7 @@ spec:
         app: audiobookshelf
     spec:
       securityContext:
+        runAsNonRoot: true
         fsGroup: 1000
         runAsUser: 1000
         runAsGroup: 1000
@@ -41,6 +42,9 @@ spec:
               subpath: podcasts
           securityContext:
             allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
       volumes:
         - name: audiobookshelf-data
           persistentVolumeClaim:
