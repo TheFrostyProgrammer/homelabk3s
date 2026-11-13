@@ -9,3 +9,4 @@ data:
   # targetPort: 13378
   CONFIG_PATH: /config
   METADATA_PATH: /metadata
+  BACKUP_PATH: /metadata/backups
