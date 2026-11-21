@@ -19,7 +19,7 @@ spec:
         # runAsGroup: 1000
       containers:
         - name: evershelf
-          image: dadaloop82/EverShelf:2.2.11
+          image: ghcr.io/dadaloop82/EverShelf:2.2.11
           ports:
             # - containerPort: 3005
           # ports:
