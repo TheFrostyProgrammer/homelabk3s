@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: evershelf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: evershelf
+  template:
+    metadata:
+      labels:
+        app: evershelf
+    spec:
+      securityContext:
+        # runAsNonRoot: true
+        # fsGroup: 1000
+        # runAsUser: 1000
+        # runAsGroup: 1000
+      containers:
+        - name: evershelf
+          image: dadaloop82/evershelf:2.2.11
+          ports:
+            # - containerPort: 3005
+          # ports:
+          # - containerPort: 80
+          # envFrom:
+          #   - configMapRef:
+          #       name: evershelf-ports
+          # volumeMounts:
+          #   - name: evershelf-data
+          #     mountPath: /config
+          #     subpath: config
+          #   - name: evershelf-data
+          #     mountPath: /metadata
+          #     subpath: metadata
+          #   - name: evershelf-data
+          #     mountPath: /audiobooks
+          #     subpath: audiobooks
+          #   - name: evershelf-data
+          #     mountPath: /podcasts
+          #     subpath: podcasts
+          # securityContext:
+          #   allowPrivilegeEscalation: false
+          #   capabilities:
+          #     drop:
+          #       - ALL
+      # volumes:
+      #   - name: evershelf-data
+      #     persistentVolumeClaim:
+      #       claimName: evershelf-data-pvc
+      #     envFrom:
+      #       - secretRef:
+      #           name: evershelf-container-env
