@@ -24,9 +24,9 @@ spec:
             - containerPort: 8080
           # ports:
           # - containerPort: 80
-          # envFrom:
-          #   - configMapRef:
-          #       name: evershelf-ports
+          envFrom:
+            - configMapRef:
+                name: evershelf-env
           # volumeMounts:
           #   - name: evershelf-data
           #     mountPath: /config
