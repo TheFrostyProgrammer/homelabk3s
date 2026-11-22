@@ -21,7 +21,7 @@ spec:
         - name: evershelf
           image: ghcr.io/dadaloop82/evershelf:2.2.11
           ports:
-            # - containerPort: 3005
+            - containerPort: 8080
           # ports:
           # - containerPort: 80
           # envFrom:
